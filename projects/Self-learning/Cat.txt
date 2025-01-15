@@ -1,0 +1,59 @@
+
+def feline_fixes(typed, source, limit):
+    """A diff function for autocorrect that determines how many letters
+    in TYPED need to be substituted to create SOURCE, then adds the difference in
+    their lengths and returns the result.
+
+    Arguments:
+        typed: a starting word
+        source: a string representing a desired goal word
+        limit: a number representing an upper bound on the number of chars that must change
+
+    >>> big_limit = 10
+    >>> feline_fixes("nice", "rice", big_limit)    # Substitute: n -> r
+    1
+    >>> feline_fixes("range", "rungs", big_limit)  # Substitute: a -> u, e -> s
+    2
+    >>> feline_fixes("pill", "pillage", big_limit) # Don't substitute anything, length difference of 3.
+    3
+    >>> feline_fixes("roses", "arose", big_limit)  # Substitute: r -> a, o -> r, s -> o, e -> s, s -> e
+    5
+    >>> feline_fixes("rose", "hello", big_limit)   # Substitute: r->h, o->e, s->l, e->l, length difference of 1.
+    5
+    """
+    # BEGIN PROBLEM 6
+    count=0
+    total=0
+    def function(typed,source,i):
+        if i==0:
+            return 0 if typed[0]==source[0] else 1 
+        elif typed[i]!=source[i]:
+            return function(typed,source,i-1)+1
+        else:
+            return function(typed,source,i-1)
+    i=min(len(typed,len(source)))
+    if len(typed)>len(source):
+        i=len(source)-1
+        total = function(typed,source,i)+len(typed)-len(source)
+        return   total
+        '''for i in range(len(source)):
+            if type[i]!=source[i]:
+                count+=1 
+            return count+len(type)-len(source)'''
+    elif len(typed)<len(source):
+        i=len(typed)-1
+        total = function(typed,source,i)-len(typed)+len(source)
+        return   total
+        '''for i in range(len(typed)):
+            if type[i]!=source[i]:
+                count+=1 
+            return count-len(type)+len(source)'''
+    else:
+        i=len(typed)-1
+        total = function(typed,source,i)
+        return   total
+        '''for i in range(len(typed)):
+            if type[i]!=source[i]:
+                count+=1 
+            return count'''
+    # END PROBLEM 6
