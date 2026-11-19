@@ -1,30 +1,32 @@
-# CS61A 学习笔记
+# CS61A Study Notes
 
-UC Berkeley CS61A (Structure and Interpretation of Computer Programs) 部分学习记录。
+[中文](README.zh-CN.md)
 
-## 项目 (Projects)
+This repository contains study notes and coursework for UC Berkeley's CS61A: *Structure and Interpretation of Computer Programs*.
 
-| 项目 | 说明 |
-|------|------|
-| **Hog** | 骰子游戏，练习高阶函数与控制抽象 |
-| **Cats** | 打字速度分析，处理文本数据与字符串操作 |
+## Projects
 
-## 实验 (Labs)
+| Project | Description |
+|---------|-------------|
+| **Hog** | A dice game for practicing higher-order functions and control abstraction |
+| **Cats** | Typing analysis for working with text data and string operations |
 
-- Lab 00 ~ Lab 05 基础实验，涵盖 Python 语法、控制流、高阶函数、递归、数据结构等
-- Lab 04.5 额外练习（数据表示）
+## Labs
 
-## 作业 (Homework)
+- Lab 00–Lab 05: Python syntax, control flow, higher-order functions, recursion, and data structures
+- Lab 04.5: Additional practice with data abstraction
 
-- HW01 — Python 基础
-- HW02 — 高阶函数
-- HW06 — SQL 查询
+## Homework
 
-## 讨论 (Discussion)
+- **HW01** — Python fundamentals
+- **HW02** — Higher-order functions
+- **HW06** — SQL queries
 
-Discussion 01 ~ 03 课堂讨论练习
+## Discussion
 
-## 其他
+Discussion 01–Discussion 03 contains classroom discussion exercises.
 
-- **Notebook** — 课程笔记 (Jupyter Notebook)
-- **Leetcode** — 链表等数据结构练习
+## Other Materials
+
+- **Notebook** — Course notes in Jupyter Notebook format
+- **Leetcode** — Practice problems covering linked lists and other data structures
